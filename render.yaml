@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: skorovanka-bot
+    runtime: python
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+        value: ""
+    buildCommand: "pip install --no-cache-dir -r requirements.txt"
+    startCommand: "python bot.py"
